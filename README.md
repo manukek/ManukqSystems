@@ -1,4 +1,4 @@
-<code>
+```go
 package main
 
 import (
@@ -8,4 +8,4 @@ import (
 func main() {
   fmt.Printf("Simple website with Golang. Manukq Systems.")
 }
-</code>
+```
