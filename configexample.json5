@@ -1,0 +1,11 @@
+{
+    "weatherApiKey": ""
+}
+
+// This is a configuration file for the weather API key.
+// rename it to config.json5 to use it in your application.
+
+// and remove the comments above for working configuration.
+
+// by Manukq with ❤️
+

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+html,body {
+    background-color: #0a0a0a;
+    background-image: url('https://cdn.goq.lol/noisy-texture-100x100-o2-d10-c-0a0a0a-t1.png');
+    background-repeat: repeat;
+    color: #b3d6c6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Doto', sans-serif;
+}
+
+.main {
+    font-size: 6rem;
+    font-weight: 500;
+    color: black;
+    background-color: #b3d6c6;
+}
+
+.sec {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2dvh;
+    font-weight: 400;
+    color: #474747;
+    padding: 8px;
+    text-align: center;
+}
