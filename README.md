@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-  fmt.Printf("Simple website with Golang. Manukq Systems.")
+  fmt.Printf("Simple website with using Golang. Manukq Systems.")
 }
 ```
