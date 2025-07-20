@@ -25,9 +25,7 @@ func main() {
   /templates/    — HTML-шаблоны с функцией url_for для статических ссылок
 
 Сайт:
-  - Подключите стили в шаблонах:
-      <link href="{{ url_for "static" }}css/style.css" rel="stylesheet">
-  - Изменяйте index.html и static/css/style.css на ваш вкус
+  - Изменяйте index.html и static/css/styles.css на ваш вкус
   - Добавляйте роуты в main.go по аналогии (если нужно будет.)
 
 Авторство:
