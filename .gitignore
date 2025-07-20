@@ -4,6 +4,7 @@
 *.so
 *.dylib
 manukqsystems
+*.zip
 
 # Test binary, built with `go test -c`
 *.test
