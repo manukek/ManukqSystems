@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
-html,body {
+html, body {
     background-color: #0a0a0a;
     background-image: url('https://cdn.goq.lol/noisy-texture-100x100-o2-d10-c-0a0a0a-t1.png');
     background-repeat: repeat;
@@ -10,8 +10,15 @@ html,body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     font-family: 'Doto', sans-serif;
+    margin: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
 }
 
 .main {
@@ -19,6 +26,9 @@ html,body {
     font-weight: 500;
     color: black;
     background-color: #b3d6c6;
+    text-align: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
 }
 
 .sec {
@@ -28,4 +38,148 @@ html,body {
     color: #474747;
     padding: 8px;
     text-align: center;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    font-family: doto, sans-serif;
+    font-size: 2.5dvh;
+    font-weight: 900;
+    color: #b3d6c6;
+    border: 1px solid #474747;
+    background-color: transparent;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    min-height: 20px;
+    box-sizing: border-box;
+}
+
+.btn svg {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    fill: currentColor;
+}
+
+.btn:hover {
+    font-weight: 600;
+    background-color: #b3d6c6;
+    border: 1px solid #b3d6c6;
+    color: black;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn::-moz-focus-inner {
+    border: 0;
+}
+
+.weather-info svg {
+    width: 1.4em;
+    height: 1.4em;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 1440px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    .main {
+        font-size: 5.2rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+    .main {
+        font-size: 4.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        font-size: 4.2rem;
+    }
+    .sec {
+        font-size: 1.8dvh;
+    }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .btn {
+        font-size: 2.2dvh;
+        padding: 8px 12px;
+    }
+    .weather-info svg {
+        width: 1.9em;
+        height: 1.9em;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .main {
+        font-size: 3.6rem;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .btn {
+        font-size: 2.1dvh;
+        padding: 8px 10px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .main {
+        font-size: 3rem;
+    }
+    .sec {
+        font-size: 1.5dvh;
+    }
+    .btn {
+        font-size: 1.9dvh;
+        padding: 6px 10px;
+    }
+    .weather-info svg {
+        width: 1.8em;
+        height: 1.8em;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .main {
+        font-size: 2.4rem;
+        padding: 8px 12px;
+    }
+    .btn {
+        font-size: 1.7dvh;
+        padding: 5px 8px;
+    }
 }

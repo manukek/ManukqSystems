@@ -4,6 +4,7 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+	"time"
 
 	"github.com/manukek/ManukqSystems/config"
 	"github.com/manukek/ManukqSystems/weather"
@@ -18,6 +19,13 @@ func urlFor(name string) string {
 	}
 }
 
+func nowInUTC() time.Time {
+	loc := time.FixedZone("UTC+5", 5*60*60) // поменяйте на нужный вам часовой пояс, в моём случае это UTC+5
+	// Если вам нужен другой часовой пояс, измените "UTC+5" и смещение в секундах
+	// Например, для UTC+3 используйте "UTC+3", 3*60*60, это время для МСК
+	return time.Now().In(loc)
+}
+
 func main() {
 	cfg, err := config.Load("config.json5")
 	if err != nil {
@@ -27,7 +35,11 @@ func main() {
 	weatherSvc := weather.NewWeatherService(cfg.WeatherApiKey)
 
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
-	tmpl := template.Must(template.New("index.html").Funcs(template.FuncMap{"url_for": urlFor}).ParseFiles("templates/index.html"))
+	funcMap := template.FuncMap{
+		"url_for": urlFor,
+		"now5":    nowInUTC,
+	}
+	tmpl := template.Must(template.New("index.html").Funcs(funcMap).ParseFiles("templates/index.html"))
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		weatherData, err := weatherSvc.GetWeather("Taldykorgan")
