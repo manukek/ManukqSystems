@@ -1,4 +1,4 @@
-module github.com/manukek/manukqsystems
+module github.com/manukek/ManukqSystems
 
 go 1.24.5
 
