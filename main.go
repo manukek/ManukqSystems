@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/manukek/manukqsystems/config"
-	"github.com/manukek/manukqsystems/weather"
+	"github.com/manukek/ManukqSystems/config"
+	"github.com/manukek/ManukqSystems/weather"
 )
 
 func urlFor(name string) string {
